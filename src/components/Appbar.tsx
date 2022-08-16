@@ -23,7 +23,8 @@ let polygon = require("../../assets/polygon.png");
 
 
 
-export default function AppBarr(props)  {
+export default function AppBarr(props : any )  {
+  
   let navigate = useNavigate();
 
 
@@ -46,26 +47,25 @@ sx={{
   mx={{xs:2, sm:5, md:5, lg:2, xl:2}}
   >
 
-      <Box 
-        onClick={() => navigate("/")}
-        sx={{
-          width: 200,
-          height: 70,
-        }}
-      >
-        <CardMedia
-        component="img"
-        image={Logo}
-        alt="Logo"
-        sx={{
-          width: '100%',
-          height:'100%',
-          objectFit:'contain',
-          cursor: 'pointer',
-        }}
-        />
-      </Box>
-
+    <Box 
+      onClick={() => navigate("/")}
+      sx={{
+        width: 200,
+        height: 70,
+      }}
+    >
+      <CardMedia
+      component="img"
+      image={Logo}
+      alt="Logo"
+      sx={{
+        width: '100%',
+        height:'100%',
+        objectFit:'contain',
+        cursor: 'pointer',
+      }}
+      />
+    </Box>
 
     <Stack direction='row' spacing={2} sx={{justifyContent:'center', alignItems:'center'}}>
 
@@ -101,7 +101,7 @@ sx={{
             </Stack>}
 
       
-      </Box>
+    </Box>
 {/* 
       <Box sx={{ display:  {xs:'block', sm:'block', md:'block', lg:'block', xl:'block'}}}>
         <DrawerMenu/>
