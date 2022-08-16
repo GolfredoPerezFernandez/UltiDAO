@@ -547,8 +547,8 @@ export default function Home(props: any) {
               my: 2,
             }}
             item
-            xs={4}
-            sm={4}
+            xs={12}
+            sm={12}
             md={4}
             lg={4}
           >
@@ -587,6 +587,7 @@ export default function Home(props: any) {
                   OR BUY NOW TOKEN PRESALE LIVE!
                 </Typography>
               </Stack>
+
               <Stack sx={{ mt: 2, mb: 2 }}>
                 <Typography
                   sx={{
@@ -609,6 +610,7 @@ export default function Home(props: any) {
                   </Typography>
                 </Typography>
               </Stack>
+
               <Stack sx={{ mt: 2, mb: 2 }}>
                 <Typography
                   sx={{
@@ -631,6 +633,7 @@ export default function Home(props: any) {
                   </Typography>
                 </Typography>
               </Stack>
+
               <Stack
                 sx={{
                   width: "100%",
@@ -642,7 +645,7 @@ export default function Home(props: any) {
               >
                 <FormControl
                   fullWidth
-                  sx={{ width: 300, alignSelf: "center", my: 2 }}
+                  sx={{ maxWidth: 300, alignSelf: "center", my: 2 }}
                   variant="standard"
                 >
                   <Typography
@@ -721,12 +724,14 @@ export default function Home(props: any) {
                   </ColorButton>
                 )}
               </Stack>
+
             </Stack>
           </Grid>
 
           <Grid
             sx={{
-              my: 2,
+              justifyContent:'center',
+              alignItems:'center'
             }}
             item
             xs={6}
@@ -749,7 +754,7 @@ export default function Home(props: any) {
               </Stack>
             </Stack>
 
-            <Stack spacing={1} sx={{ flexDirection: "row" }}>
+            <Stack spacing={1} sx={{flexDirection: { xs:'colum', sm:'colum', md:'row', lg:'row', xl:'row', justifyContent: "center", alignItems:'center' }}}>
               <Stack
                 sx={{
                   boxShadow: "0px 0px 8px 2px rgba(0,0,0,0.3)",
@@ -757,7 +762,7 @@ export default function Home(props: any) {
                   alignSelf: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "522px",
+                  maxWidth: "522px",
                   height: "131px",
                   borderRadius: 6,
                   border: "1px solid rgba(117, 117, 117, 0.1)",
@@ -766,6 +771,7 @@ export default function Home(props: any) {
               >
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -782,6 +788,7 @@ export default function Home(props: any) {
 
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -805,7 +812,7 @@ export default function Home(props: any) {
                   alignSelf: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "522px",
+                  maxWidth: "522px",
                   height: "131px",
                   borderRadius: 6,
                   border: "1px solid rgba(117, 117, 117, 0.1)",
@@ -814,6 +821,7 @@ export default function Home(props: any) {
               >
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -830,6 +838,7 @@ export default function Home(props: any) {
 
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -848,7 +857,7 @@ export default function Home(props: any) {
               </Stack>
             </Stack>
 
-            <Stack sx={{ mt: 3, flexDirection: "row", alignSelf: "center" }}>
+            <Stack spacing={1} sx={{ my: 3, flexDirection: { xs:'colum', sm:'colum', md:'row', lg:'row', xl:'row'}, justifyContent: "center", alignItems:'center' }}>
               <Stack
                 sx={{
                   boxShadow: "0px 0px 8px 2px rgba(0,0,0,0.3)",
@@ -856,7 +865,7 @@ export default function Home(props: any) {
                   alignSelf: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "522px",
+                  maxWidth: "522px",
                   height: "131px",
                   borderRadius: 6,
                   border: "1px solid rgba(117, 117, 117, 0.1)",
@@ -865,6 +874,7 @@ export default function Home(props: any) {
               >
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -881,6 +891,7 @@ export default function Home(props: any) {
 
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -904,7 +915,7 @@ export default function Home(props: any) {
                   alignSelf: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  width: "522px",
+                  maxWidth: "522px",
                   height: "131px",
                   borderRadius: 6,
                   border: "1px solid rgba(117, 117, 117, 0.1)",
@@ -913,6 +924,7 @@ export default function Home(props: any) {
               >
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -929,6 +941,7 @@ export default function Home(props: any) {
 
                 <Typography
                   sx={{
+                    mx:2,
                     fontFamily: "Orbitron_700Bold",
                     color: "#FFF",
                     fontSize: 20,
@@ -964,8 +977,8 @@ export default function Home(props: any) {
         >
           <Grid
             item
-            xs={4}
-            sm={4}
+            xs={12}
+            sm={12}
             md={4}
             lg={4}
           >
@@ -980,7 +993,7 @@ export default function Home(props: any) {
                 sx={{
                   mx: 6,
                   justifyContent: "center",
-                  maxWidth: "522px",
+                  maxWidth: {xs:130, sm:200, md:300, lg:522, xl:522},
                 }}
               >
                 <Typography
@@ -1024,8 +1037,8 @@ export default function Home(props: any) {
 
           <Grid
             item
-            xs={6}
-            sm={6}
+            xs={12}
+            sm={12}
             md={6}
             lg={6}
           >
@@ -1222,8 +1235,8 @@ export default function Home(props: any) {
                 <Stack
                   sx={{
                     justifyContent: "center",
-                    maxWidth: 170,
-                    height: "131px",
+                    maxWidth: {xs:130, sm:130, md:130, lg:170, xl:170},
+                    height: 131,
                   }}
                 >
                   <Typography
@@ -1245,6 +1258,7 @@ export default function Home(props: any) {
 
                   <Typography
                     sx={{
+                      wordBreak: 'break-all',
                       mx:2,
                       fontFamily: "Orbitron_700Bold",
                       color: "#c2c2c2",
