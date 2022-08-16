@@ -8,6 +8,9 @@ import CardMedia from '@mui/material/CardMedia';
 import ParticlesBg from 'particles-bg';
 import Appbar from '@components/Appbar';
 
+let Logo = require("../../assets/logo.png");
+
+
 import {ImageBackground, mageBackground } from "react-native";
 const Home = React.lazy(() => import('@screens/Home'));
 const Footer = React.lazy(() => import('@screens/Footer'));
@@ -72,8 +75,8 @@ init()
     >
       <CardMedia
         component="img"
-        image={require('@assets/svg/singulart-logo.svg')}
-        alt="Singulart Logo"
+        image={Logo}
+        alt="ULTIMATE Logo"
         sx={{ width: { xs: 150, sm: 150, md: 200, lg: 200, xl: 200 }, objectFit: 'cover', }}
       />
       <CircularProgress
