@@ -962,7 +962,7 @@ export default function Home(props: any) {
             </Stack>
           </Grid>
         </Grid>
-
+{/* 
         <Grid
           my={3}
           direction="row"
@@ -1321,7 +1321,7 @@ export default function Home(props: any) {
 
             </Stack>
           </Grid>
-        </Grid>
+        </Grid> */}
 
         {false ? (
           <Grid
