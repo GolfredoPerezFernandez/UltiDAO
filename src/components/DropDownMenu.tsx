@@ -53,7 +53,9 @@ export const DropdownMenuDemo = (props) => {
   const styles = useStyles();
   let navigate = useNavigate();
 
-  function Mynft() {navigate("/Mynft")}
+  function GotoRoadMap() {navigate("/road-map")}
+  function GotoAboutUs() {navigate("/about-us")}
+  function GotoHome() {navigate("/")}
 
   async function logOut() {
     await logout();
@@ -146,7 +148,24 @@ export const DropdownMenuDemo = (props) => {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
-   
+            <MenuItem onClick={GotoHome}>
+              <ListItemIcon>
+                <Logout fontSize="small" />
+              </ListItemIcon>
+              Home
+            </MenuItem> 
+            <MenuItem onClick={GotoAboutUs}>
+              <ListItemIcon>
+                <Logout fontSize="small" />
+              </ListItemIcon>
+              About Us
+            </MenuItem> 
+            <MenuItem onClick={GotoRoadMap}>
+              <ListItemIcon>
+                <Logout fontSize="small" />
+              </ListItemIcon>
+              RoadMap
+            </MenuItem> 
 
             <Divider />
 
