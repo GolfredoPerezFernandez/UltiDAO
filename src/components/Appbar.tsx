@@ -15,11 +15,13 @@ import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import DropDownMenu from './DropDownMenu';
 
+import DropDownBlockchains from './Buttons/button-header/dropdown-blockchains';
 
 let Logo = require("../../assets/logo.png");
 
 
 let polygon = require("../../assets/polygon.png");
+
 
 
 
@@ -64,6 +66,12 @@ sx={{
         objectFit:'contain',
         cursor: 'pointer',
       }}
+      />
+    </Box>
+
+    <Box>
+      <DropDownBlockchains
+        display={{ xs: 'none', sm: 'none', md: 'block' }}
       />
     </Box>
 
