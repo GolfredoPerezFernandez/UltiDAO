@@ -87,9 +87,10 @@ sx={{
               userAddress={props.ethAddress } 
               />
               
+             
               <CardMedia
             component="img"
-            image="https://cdn.discordapp.com/attachments/907590324627595284/1001294615099486208/mint-live.png"
+            image={polygon}
             alt="Logo"
             sx={{width: {xs:40, sm:'none', md:50, lg:50, xl:50}, objectFit:'cover',}}
             />  

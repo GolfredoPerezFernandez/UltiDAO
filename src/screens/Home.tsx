@@ -240,9 +240,8 @@ export default function Home(props: any) {
           abi: abi.token,
         };
         const totalSupply = await Moralis.executeFunction(options4);
-        let val =
-          (await Moralis.Units.FromWei(totalSupply)) -
-          (await Moralis.Units.FromWei(parseFloat(balanceOf)));
+        let val =( Moralis.Units.FromWei(totalSupply)) -
+          ( Moralis.Units.FromWei(parseFloat(balanceOf)));
         setCirculating(val);
         const options33 = {
           chain: "matic",
@@ -256,17 +255,36 @@ export default function Home(props: any) {
           startingBlock: "0",
           endingBlock: date.block,
         };
-        Moralis.initPlugins();
-        let covalent =
-          await Moralis.Plugins.covalent.getChangesInTokenHolerBetweenBlockHeights(
-            holders
-          );
-        console.log(JSON.stringify(covalent));
-        setHolders(covalent.data.items.length);
 
+        
         let val2 = await Moralis.Units.FromWei(totalSupply);
 
         setTotalSupply(parseFloat(val2));
+        try{
+
+          await Moralis.initPlugins();
+          
+ const covalent =  Moralis.Plugins.covalent;
+ const result = await covalent.getBlockTokenHolders({
+  chainId: 137,
+  address: "0x301d135E85FA8C8839Ba738eA4Cc9868Cab520Bd",
+  pageSize: 10000,
+  startingBlock: "0",
+  endingBlock: date.block,
+  });
+  console.log(result.data);
+          
+          /* 
+          let covalent = await Moralis.Plugins.covalent.getChangesInTokenHolerBetweenBlockHeights(
+              holders
+            );
+            console.log("covalent "+JSON.stringify(covalent));
+          console.log("covalent "+JSON.stringify(covalent)); */
+          setHolders(covalent.data.items.length);
+        }catch (e) {
+          console.log(e.message)
+        }
+
       } else {
       }
     }
@@ -962,7 +980,7 @@ export default function Home(props: any) {
             </Stack>
           </Grid>
         </Grid>
-
+{/* 
         <Grid
           my={3}
           direction="row"
@@ -1321,7 +1339,7 @@ export default function Home(props: any) {
 
             </Stack>
           </Grid>
-        </Grid>
+        </Grid> */}
 
         {false ? (
           <Grid
